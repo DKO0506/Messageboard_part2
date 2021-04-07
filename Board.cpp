@@ -44,15 +44,11 @@ namespace ariel {
 
     string Board::read(unsigned int row, unsigned int col, Direction d, unsigned int size) {
         string answer;
-
         bool check = row < 0 || col < 0 || row >= UINT32_MAX || col >= UINT32_MAX;
-
         if (check) {
             throw "Out of bounds!";
             return "";
         }
-
-
         if (d == Direction::Horizontal) {
 
             for (unsigned int c = col; c < col + size; c++) {
@@ -62,7 +58,6 @@ namespace ariel {
                     answer += slots_vec.at(row).at(c);
                 }
             }
-
         } else {
             for (unsigned int r = row; r < row + size; r++) {
                 if (r >= max_row) {
@@ -77,13 +72,11 @@ namespace ariel {
 
     void Board::show() {
         string sh;
-
         for (unsigned int r = min_row; r < max_row; r++) {
             for (unsigned int c = min_col; c < max_col; c++) {
                 sh += slots_vec.at(r).at(c);
             }
             sh += "\n";
         }
-
     }
 };

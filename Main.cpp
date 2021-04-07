@@ -1,26 +1,26 @@
 #include "Board.hpp"
 #include <stdlib.h>
 #include <time.h>
+
 using namespace ariel;
 
 int main() {
 
-    cout << "hello" << endl;
+    cout << "Hello, This is my project" << endl;
 
     Board board;
 
 
-    board.post(0, 0, Direction::Horizontal, "Hello");
+    board.post(0, 0, Direction::Horizontal, "Hello  This is my project");
 
     board.show();
 
-    board.post(2, 4, Direction::Vertical, "Hello");
+    board.post(2, 4, Direction::Vertical, "Hello, This is my project");
 
     board.show();
 
 
-
-    board.post(10, 10, Direction::Horizontal, "Good Bye!");
+    board.post(5, 5, Direction::Horizontal, "Good Bye!");
 
     board.show();
 
